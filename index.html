@@ -27,7 +27,7 @@
       <div class="flex justify-around items-center">
         <!-- 1st part -->
         <div class="justify-center align-middle">
-          <button class="px-7 py-2 bg-lime-300 hover:bg-orange-500 font-bold rounded-md">Blog</button>
+          <button id="blog" class="px-7 py-2 bg-lime-300 hover:bg-orange-500 font-bold rounded-md">Blog</button>
         </div>
         <!-- 2nd part -->
         <div class="flex items-center">
@@ -55,6 +55,26 @@
 
 
   <main class="mx-10 md:mx-15 lg:mx-32 mt-52">
+
+    <!--  -->
+    <div id="congrates" class="hidden flex fixed inset-0 justify-center items-center backdrop-blur-sm">
+      <div class="card bg-base-100 w-96 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+            class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions">
+            <button id="congrates-remove" class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
 
 
     <!-- 2 middle Button
@@ -92,7 +112,7 @@
         </div>
         <div class="flex-1">
           <!-- Donate Show  -->
-          <div class="flex items-center bg-slate-200 p-2 rounded-md w-24 mt-1">
+          <div class="flex items-center bg-slate-200 p-2 rounded-md w-32 mt-1">
             <img class="w-5 h-5 mr-1" src="./assets/coin.png" alt="coin">
             <p class="font-bold text-gray-500">
               <span id="sec-coin-show" class="mr-1">600</span>BDT</p>
@@ -112,7 +132,7 @@
         </div>
         <div class="flex-1">
           <!-- Donate Show  -->
-          <div class="flex items-center bg-slate-200 p-2 rounded-md w-28 mt-1">
+          <div class="flex items-center bg-slate-200 p-2 rounded-md w-36 mt-1">
             <img class="w-5 h-5 mr-1" src="./assets/coin.png" alt="coin">
             <p class="font-bold text-gray-500">
               <span id="last-coin-show" class="mr-1">2400</span>BDT</p>

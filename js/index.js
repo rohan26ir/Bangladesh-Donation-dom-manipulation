@@ -10,7 +10,7 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   const firstInputField = Number(document.getElementById('first-input-field').value);
   console.log( firstInputField);
 
-  if(isNaN(firstInputField)){
+  if(isNaN(firstInputField) || firstInputField <=0){
     alert("Give only number degit");
     return;
   }
@@ -30,7 +30,16 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   const firstBalanceElement =document.getElementById('balance');
   firstBalanceElement.innerText = firstBalance;
 
-  
+  const welcome = document.getElementById('congrates');
+  welcome.classList.remove('hidden');
+
+
+
+})
+
+document.getElementById('congrates').addEventListener('click', function(){
+  const welcome = document.getElementById('congrates');
+  welcome.classList.add('hidden');
 })
 
 // 2nd Donate
@@ -40,7 +49,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
   const secInputField = Number(document.getElementById('sec-input-field').value);
   console.log( secInputField);
 
-  if(isNaN(secInputField)){
+  if(isNaN(secInputField) || secInputField <=0){
     alert("Give only number degit");
     return;
   }
@@ -60,7 +69,12 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
   const secBalanceElement =document.getElementById('balance');
   secBalanceElement.innerText = secBalance;
 
-  
+  const welcome = document.getElementById('congrates');
+  welcome.classList.remove('hidden');
+  // input Zero
+  const zero = document.getElementById('sec-input-field');
+  zero.value = '';
+
 })
 
 // 3rd Donate
@@ -70,7 +84,7 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   const lastInputField = Number(document.getElementById('last-input-field').value);
   console.log( lastInputField);
 
-  if(isNaN(lastInputField)){
+  if(isNaN(lastInputField) || lastInputField <= 0){
     alert("Give only number degit");
     return;
   }
@@ -90,5 +104,17 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   const lastBalanceElement =document.getElementById('balance');
   lastBalanceElement.innerText = lastBalance;
 
+  const welcome = document.getElementById('congrates');
+  welcome.classList.remove('hidden');
+
+  // input Zero
+  const zero = document.getElementById('last-input-field');
+  zero.value = '';
   
+})
+
+// Blog Page 
+
+document.getElementById('blog').addEventListener('click', function(){
+   window.location.href='./blog.html'
 })
