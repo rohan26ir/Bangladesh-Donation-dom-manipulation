@@ -9,14 +9,15 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
 
   const firstInputField = Number(document.getElementById('first-input-field').value);
   console.log( firstInputField);
+  const balance = Number(document.getElementById('balance').innerText);
 
-  if(isNaN(firstInputField) || firstInputField <=0){
+  if(isNaN(firstInputField) || firstInputField <=0 || firstInputField > balance){
     alert("Give only number degit");
     return;
   }
 
   const firstCoinShow = Number(document.getElementById('first-coin-show').innerText);
-  const balance = Number(document.getElementById('balance').innerText);
+  // const balance = Number(document.getElementById('balance').innerText);
 
 
   const firstTotalCoin = firstCoinShow + firstInputField;
@@ -48,14 +49,16 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
   const secInputField = Number(document.getElementById('sec-input-field').value);
   console.log( secInputField);
+  const balance = Number(document.getElementById('balance').innerText);
 
-  if(isNaN(secInputField) || secInputField <=0){
+
+  if(isNaN(secInputField) || secInputField <=0 || secInputField > balance){
     alert("Give only number degit");
     return;
   }
 
   const secCoinShow = Number(document.getElementById('sec-coin-show').innerText);
-  const balance = Number(document.getElementById('balance').innerText);
+  // const balance = Number(document.getElementById('balance').innerText);
 
 
   const secTotalCoin = secCoinShow + secInputField;
@@ -83,14 +86,16 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
 
   const lastInputField = Number(document.getElementById('last-input-field').value);
   console.log( lastInputField);
+  const balance = Number(document.getElementById('balance').innerText);
 
-  if(isNaN(lastInputField) || lastInputField <= 0){
+
+  if(isNaN(lastInputField) || lastInputField <= 0 || lastInputField > balance){
     alert("Give only number degit");
     return;
   }
 
   const lastCoinShow = Number(document.getElementById('last-coin-show').innerText);
-  const balance = Number(document.getElementById('balance').innerText);
+  // const balance = Number(document.getElementById('balance').innerText);
 
 
   const lastTotalCoin = lastCoinShow + lastInputField;
@@ -113,8 +118,47 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   
 })
 
-// Blog Page 
+// Blog Button Clicked and Go to the Page name called 'Blog'
 
 document.getElementById('blog').addEventListener('click', function(){
    window.location.href='./blog.html'
+
+})
+
+
+
+
+// History Button Clicked and Show the history section 
+
+document.getElementById('History-btn').addEventListener('click', function(){
+
+  const DonationShow = document.getElementById('Donation-show');
+  const HistoryShow = document.getElementById('History-show');
+  
+  document.getElementById('History-btn').classList.add('bg-lime-300');
+  document.getElementById('History-btn').classList.remove('border-solid', 'border-2');
+  document.getElementById('Donation-btn').classList.add('border-solid', 'border-2');
+  document.getElementById('Donation-btn').classList.remove('bg-lime-300');
+
+  DonationShow.classList.add('hidden');
+  HistoryShow.classList.remove('hidden');
+
+  console.log("click History Button");
+
+})
+
+document.getElementById('Donation-btn').addEventListener('click', function(){
+
+  const DonationShow = document.getElementById('Donation-show');
+  const HistoryShow = document.getElementById('History-show');
+
+  document.getElementById('Donation-btn').classList.add('border-solid', 'border-2', 'bg-lime-300');
+  document.getElementById('Donation-btn').classList.remove('border-solid', 'border-2');
+  document.getElementById('History-btn').classList.remove('bg-lime-300');
+  document.getElementById('History-btn').classList.add('border-solid', 'border-2');
+
+
+  DonationShow.classList.remove('hidden');
+  HistoryShow.classList.add('hidden');
+
 })

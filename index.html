@@ -46,8 +46,8 @@
     <!-- <section class="fixed top-0 w-full backdrop-blur-lg"> -->
        <!-- 2 middle Button -->
     <div class="flex justify-center mb-5 mt-8 space-x-2 ">
-      <button class="px-6 py-1 bg-lime-300 rounded-md">Donation</button>
-      <button class="px-6 py-1 rounded-md border-solid border-2 border-gray-200">History</button>
+      <button id="Donation-btn" class="px-6 py-1 rounded-md bg-lime-300">Donation</button>
+      <button id="History-btn"  class="px-6 py-1 rounded-md border-solid border-2 border-gray-200">History</button>
      </div>
     </section>
   </header>
@@ -56,20 +56,18 @@
 
   <main class="mx-10 md:mx-15 lg:mx-32 mt-52">
 
-    <!--  -->
+    <!-- Congrates Masssage  -->
     <div id="congrates" class="hidden flex fixed inset-0 justify-center items-center backdrop-blur-sm">
       <div class="card bg-base-100 w-96 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-            class="rounded-xl" />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions">
-            <button id="congrates-remove" class="btn btn-primary">Buy Now</button>
+        <div class="justify-center text-center p-4 space-y-3">
+          <h2 class="text-3xl text-black font-bold">Congrates!</h2>
+          <div class="justify-center text-center flex">
+            <img class="w-10 h-10" src="./assets/coin.png" alt="">
+          </div>
+          <p>You have Donated for Humankind</p>
+          <h2 class="text-lg text-black font-bold">Successfully</h2>
+              <button id="congrates-remove" class="bg-gray-200 text-gray-500 rounded-lg p-2">close confirmation</button>
+        </div>
           </div>
         </div>
       </div>
@@ -82,6 +80,14 @@
       <button class="px-6 py-1 bg-lime-300 rounded-md">Donation</button>
       <button class="px-6 py-1 rounded-md border-solid border-2 border-gray-200">History</button>
      </div> -->
+
+<!-- Donation Start -->
+
+
+<div id="Donation-show" class="">
+
+
+
      <!-- 1st post -->
       <div class="flex-col md:flex-row flex  border-2 border-gray-100 rounded-md p-4 shadow-md">
         <div class="flex-1 mr-4">
@@ -144,6 +150,18 @@
         </div>
       </div>
       <!-- End Post -->
+    </div>
+   <!-- Donation End -->
+
+<!-- History Start -->
+ <div id="History-show" class="hidden bg-red-600 h-20">
+  
+ </div>
+<!-- History End -->
+
+
+
+
   </main>
   <footer>
     <div class="h-28 bg-gray-100">
@@ -151,7 +169,7 @@
     </div>
   </footer>
 
-  <!-- Add below js File -->
+  <!-- Add below js add File -->
    <script src="./js/index.js"></script>
 </body>
 </html>
