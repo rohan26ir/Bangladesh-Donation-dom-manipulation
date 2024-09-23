@@ -36,6 +36,27 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
 
 
 
+   //  history form
+const lasthistory = document.getElementById('history-list')
+const p = document.createElement('p');
+
+p.classList.add(
+  
+  'p-5',
+  'rounded-xl',
+  'mb-2',
+  'mx-fit',
+  'border-2',
+  'border-gray-200'
+)
+
+p.innerHTML = `
+   <p class='mb-1 text-xl font-bold'>${firstInputField} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+   <p>${new Date()}</p>
+`
+lasthistory.appendChild(p);
+
+
 })
 
 document.getElementById('congrates').addEventListener('click', function(){
@@ -74,10 +95,29 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
-  // input Zero
-  const zero = document.getElementById('sec-input-field');
-  zero.value = '';
 
+
+
+  //  history form
+const lasthistory = document.getElementById('history-list')
+const p = document.createElement('p');
+
+p.classList.add(
+  
+  'p-5',
+  'rounded-xl',
+  'mb-2',
+  'mx-fit',
+  'border-2',
+  'border-gray-200'
+)
+
+p.innerHTML = `
+   <p class='mb-1 text-xl font-bold'>${secInputField} Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+   <p>${new Date()}</p>
+`
+lasthistory.appendChild(p);
+  
 })
 
 // 3rd Donate
@@ -112,9 +152,29 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
 
-  // input Zero
-  const zero = document.getElementById('last-input-field');
-  zero.value = '';
+  // // input Zero
+  // const zero = document.getElementById('last-input-field');
+  // zero.value = '';
+
+//  history form
+const lasthistory = document.getElementById('history-list')
+const p = document.createElement('p');
+
+p.classList.add(
+  
+  'p-5',
+  'rounded-xl',
+  'mb-2',
+  'mx-fit',
+  'border-2',
+  'border-gray-200'
+)
+
+p.innerHTML = `
+   <p class='mb-1 text-xl font-bold'>${lastInputField} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+   <p>${new Date()}</p>
+`
+lasthistory.appendChild(p);
   
 })
 
