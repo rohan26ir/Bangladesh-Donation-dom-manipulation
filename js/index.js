@@ -125,7 +125,7 @@ p.innerHTML = `
 lasthistory.appendChild(p);
 
 // // input Empty
-const zero = document.getElementById('last-input-field');
+const zero = document.getElementById('sec-input-field');
 zero.value = '';
   
 })
