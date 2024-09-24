@@ -12,7 +12,10 @@ function donateCall(id){
 }
 
 // Call Function for innerText
-// function dinner
+// function dinnerTextCall(id){
+//   const dinnerText = 
+//   return dinnerText;
+// }
 
 
 // For First Donetion
@@ -44,6 +47,7 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
+  welcome.classList.add('flex');
 
 
 
@@ -62,7 +66,7 @@ p.classList.add(
 )
 
 p.innerHTML = `
-   <p class='mb-1 text-xl font-bold'>${firstInputField} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+   <p class='mb-1 text-xl font-bold'>${firstInputField.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
    <p>${new Date()}</p>
 `
 lasthistory.appendChild(p);
@@ -75,7 +79,7 @@ document.getElementById('congrates').addEventListener('click', function(){
   welcome.classList.add('hidden');
 })
 
-// 2nd Donate
+// -------[2nd Donate]--------
 
 document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
@@ -106,6 +110,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
+  welcome.classList.add('flex');
 
 
 
@@ -124,7 +129,7 @@ p.classList.add(
 )
 
 p.innerHTML = `
-   <p class='mb-1 text-xl font-bold'>${secInputField} Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+   <p class='mb-1 text-xl font-bold'>${secInputField.toFixed(2)} Taka is Donated for Flood Relief in Feni,Bangladesh</p>
    <p>${new Date()}</p>
 `
 lasthistory.appendChild(p);
@@ -162,10 +167,9 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
+  welcome.classList.add('flex');
 
-  // // input Zero
-  // const zero = document.getElementById('last-input-field');
-  // zero.value = '';
+
 
 //  history form
 const lasthistory = document.getElementById('history-list')
@@ -182,10 +186,15 @@ p.classList.add(
 )
 
 p.innerHTML = `
-   <p class='mb-1 text-xl font-bold'>${lastInputField} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+   <p class='mb-1 text-xl font-bold'>${lastInputField.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
    <p>${new Date()}</p>
 `
 lasthistory.appendChild(p);
+
+
+  // // input Zero
+  const zero = document.getElementById('last-input-field');
+  zero.value = '';
   
 })
 
