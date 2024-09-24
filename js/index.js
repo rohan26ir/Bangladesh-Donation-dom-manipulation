@@ -4,10 +4,15 @@
 // const firstInputField = document.getElementById('first-input-field').innerText;
 // const firstDonateBtn = document.getElementById('first-donate-btn').innerText;
 
+function donateCall(id){
+  const dvalue = Number(document.getElementById(id).value);
+  return dvalue;
+}
+
 
 document.getElementById('first-donate-btn').addEventListener('click', function(){
 
-  const firstInputField = Number(document.getElementById('first-input-field').value);
+  const firstInputField = donateCall('first-input-field')
   console.log( firstInputField);
   const balance = Number(document.getElementById('balance').innerText);
 
@@ -29,7 +34,7 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   firstCoinElement.innerText = firstTotalCoin;
 
   const firstBalanceElement =document.getElementById('balance');
-  firstBalanceElement.innerText = firstBalance;
+  firstBalanceElement.innerText = firstBalance.toFixed(2);
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
@@ -68,7 +73,7 @@ document.getElementById('congrates').addEventListener('click', function(){
 
 document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
-  const secInputField = Number(document.getElementById('sec-input-field').value);
+  const secInputField = donateCall('sec-input-field');
   console.log( secInputField);
   const balance = Number(document.getElementById('balance').innerText);
 
@@ -91,7 +96,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
   secCoinElement.innerText = secTotalCoin;
 
   const secBalanceElement =document.getElementById('balance');
-  secBalanceElement.innerText = secBalance;
+  secBalanceElement.innerText = secBalance.toFixed(2);
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
@@ -124,7 +129,7 @@ lasthistory.appendChild(p);
 
 document.getElementById('last-donate-btn').addEventListener('click', function(){
 
-  const lastInputField = Number(document.getElementById('last-input-field').value);
+  const lastInputField = donateCall('last-input-field');
   console.log( lastInputField);
   const balance = Number(document.getElementById('balance').innerText);
 
@@ -147,7 +152,7 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   lastCoinElement.innerText = lastTotalCoin;
 
   const lastBalanceElement =document.getElementById('balance');
-  lastBalanceElement.innerText = lastBalance;
+  lastBalanceElement.innerText = lastBalance.toFixed(2);
 
   const welcome = document.getElementById('congrates');
   welcome.classList.remove('hidden');
