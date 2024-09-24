@@ -26,7 +26,6 @@ function dinnerTextCall(id){
 document.getElementById('first-donate-btn').addEventListener('click', function(){
 
   const firstInputField = donateCall('first-input-field')
-  console.log( firstInputField);
   const balance = dinnerTextCall('balance');
 
   if(isNaN(firstInputField) || firstInputField <=0 || firstInputField > balance){
@@ -41,7 +40,6 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   const firstTotalCoin = firstCoinShow + firstInputField;
   const firstBalance = balance - firstInputField;
 
-  console.log(firstTotalCoin);
 
   const firstCoinElement = document.getElementById('first-coin-show');
   firstCoinElement.innerText = firstTotalCoin.toFixed(2);
@@ -90,8 +88,6 @@ document.getElementById('congrates').addEventListener('click', function(){
 document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
   const secInputField = donateCall('sec-input-field');
-  console.log( secInputField);
-  // const balance = Number(document.getElementById('balance').innerText);
   const balance = dinnerTextCall('balance')
 
 
@@ -106,7 +102,6 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
   const secTotalCoin = secCoinShow + secInputField;
   const secBalance = balance - secInputField;
 
-  console.log(secTotalCoin);
 
   const secCoinElement = document.getElementById('sec-coin-show');
   secCoinElement.innerText = secTotalCoin.toFixed(2);
@@ -147,9 +142,7 @@ lasthistory.appendChild(p);
 document.getElementById('last-donate-btn').addEventListener('click', function(){
 
   const lastInputField = donateCall('last-input-field');
-  console.log( lastInputField);
   const balance = dinnerTextCall('balance');
-  // const balance = Number(document.getElementById('balance').innerText);
 
 
   if(isNaN(lastInputField) || lastInputField <= 0 || lastInputField > balance){
@@ -163,7 +156,6 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   const lastTotalCoin = lastCoinShow + lastInputField;
   const lastBalance = balance - lastInputField;
 
-  console.log(lastTotalCoin);
 
   const lastCoinElement = document.getElementById('last-coin-show');
   lastCoinElement.innerText = lastTotalCoin.toFixed(2);
@@ -231,7 +223,6 @@ document.getElementById('History-btn').addEventListener('click', function(){
   HistoryShow.classList.remove('hidden');
   footerShow.classList.add('hidden')
 
-  console.log("click History Button");
 
 })
 
