@@ -4,12 +4,18 @@
 // const firstInputField = document.getElementById('first-input-field').innerText;
 // const firstDonateBtn = document.getElementById('first-donate-btn').innerText;
 
+// Call Function for Value
+
 function donateCall(id){
   const dvalue = Number(document.getElementById(id).value);
   return dvalue;
 }
 
+// Call Function for innerText
+// function dinner
 
+
+// For First Donetion
 document.getElementById('first-donate-btn').addEventListener('click', function(){
 
   const firstInputField = donateCall('first-input-field')
@@ -31,7 +37,7 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   console.log(firstTotalCoin);
 
   const firstCoinElement = document.getElementById('first-coin-show');
-  firstCoinElement.innerText = firstTotalCoin;
+  firstCoinElement.innerText = firstTotalCoin.toFixed(2);
 
   const firstBalanceElement =document.getElementById('balance');
   firstBalanceElement.innerText = firstBalance.toFixed(2);
@@ -93,7 +99,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
   console.log(secTotalCoin);
 
   const secCoinElement = document.getElementById('sec-coin-show');
-  secCoinElement.innerText = secTotalCoin;
+  secCoinElement.innerText = secTotalCoin.toFixed(2);
 
   const secBalanceElement =document.getElementById('balance');
   secBalanceElement.innerText = secBalance.toFixed(2);
@@ -149,7 +155,7 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
   console.log(lastTotalCoin);
 
   const lastCoinElement = document.getElementById('last-coin-show');
-  lastCoinElement.innerText = lastTotalCoin;
+  lastCoinElement.innerText = lastTotalCoin.toFixed(2);
 
   const lastBalanceElement =document.getElementById('balance');
   lastBalanceElement.innerText = lastBalance.toFixed(2);
