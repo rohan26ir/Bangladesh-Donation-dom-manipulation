@@ -29,7 +29,7 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   const balance = dinnerTextCall('balance');
 
   if(isNaN(firstInputField) || firstInputField <=0 || firstInputField > balance){
-    alert("Give only number degit");
+    alert("invalid input");
     return;
   }
 
@@ -92,7 +92,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
 
   if(isNaN(secInputField) || secInputField <=0 || secInputField > balance){
-    alert("Give only number degit");
+    alert("invalid input");
     return;
   }
 
@@ -146,7 +146,7 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
 
 
   if(isNaN(lastInputField) || lastInputField <= 0 || lastInputField > balance){
-    alert("Give only number degit");
+    alert("invalid input");
     return;
   }
 
