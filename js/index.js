@@ -4,6 +4,7 @@
 // const firstInputField = document.getElementById('first-input-field').innerText;
 // const firstDonateBtn = document.getElementById('first-donate-btn').innerText;
 
+// -----------------[Function Call]-----------------
 // Call Function for Value
 
 function donateCall(id){
@@ -13,13 +14,9 @@ function donateCall(id){
 
 // Call Function for innerText
 function dinnerTextCall(id){
-
-  // const balance = Number(document.getElementById('balance').innerText);
-
   const dinnerText = Number(document.getElementById(id).innerText);
   return dinnerText;
 }
-
 
 // ------------------------[1st Donate]------------------------
 
@@ -29,12 +26,11 @@ document.getElementById('first-donate-btn').addEventListener('click', function()
   const balance = dinnerTextCall('balance');
 
   if(isNaN(firstInputField) || firstInputField <=0 || firstInputField > balance){
-    alert("invalid input");
+    alert("Invalid Input Amount");
     return;
   }
 
   const firstCoinShow = dinnerTextCall('first-coin-show');
-  // const balance = Number(document.getElementById('balance').innerText);
 
 
   const firstTotalCoin = firstCoinShow + firstInputField;
@@ -73,14 +69,7 @@ p.innerHTML = `
 `
 lasthistory.appendChild(p);
 
-
 })
-
-document.getElementById('congrates').addEventListener('click', function(){
-  const welcome = document.getElementById('congrates');
-  welcome.classList.add('hidden');
-})
-
 
 
 // ------------------------[2nd Donate]------------------------
@@ -92,7 +81,7 @@ document.getElementById('sec-donate-btn').addEventListener('click', function(){
 
 
   if(isNaN(secInputField) || secInputField <=0 || secInputField > balance){
-    alert("invalid input");
+    alert("Invalid Input Amount");
     return;
   }
 
@@ -134,6 +123,10 @@ p.innerHTML = `
    <p>${new Date()}</p>
 `
 lasthistory.appendChild(p);
+
+// // input Empty
+const zero = document.getElementById('last-input-field');
+zero.value = '';
   
 })
 
@@ -146,7 +139,7 @@ document.getElementById('last-donate-btn').addEventListener('click', function(){
 
 
   if(isNaN(lastInputField) || lastInputField <= 0 || lastInputField > balance){
-    alert("invalid input");
+    alert("Invalid Input Amount");
     return;
   }
 
@@ -190,11 +183,20 @@ p.innerHTML = `
 lasthistory.appendChild(p);
 
 
-  // // input Zero
+  // // input Empty
   const zero = document.getElementById('last-input-field');
   zero.value = '';
   
 })
+
+
+
+// -----------------[Congrates Massage]-----------------
+document.getElementById('congrates').addEventListener('click', function(){
+  const welcome = document.getElementById('congrates');
+  welcome.classList.add('hidden');
+})
+
 
 // Blog Button Clicked and Go to the Page name called 'Blog'
 
